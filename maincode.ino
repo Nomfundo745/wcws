@@ -498,7 +498,7 @@ void SendMessage(String message){
   Serial.println("Sending SMS to the desired phone number!");
   GSMserial.print("AT+CMGS=\"26878047123\"\r");
   
-  message += "LOCATION: https://asksensors.com/sensorLocation.html?id=9084\n";
+  message += “AT+CIPGSMLOC”;
   GSMserial.print(message); // SMS Text
   delay(200);
   Serial.println("SMS sent");
